@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px 20px;
+    background-color: hsl(36, 100%, 99%);
+    font-family: "Inter", sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(36, 100%, 99%);
+    height: 10vh;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    z-index: 1;
+}
+
+.nav_checkbox {
+    display: none;
+}
+
+.nav_menu {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    background-color: hsl(36, 100%, 99%);
+    width: 70%;
+    height: 90vh;
+    display: none;
+    flex-direction: column;
+}
+
+.nav_menu li {
+    list-style: none;
+    padding: 0px 0px 25px 20px;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.nav_menu li:first-child {
+    padding-top: 75px;
+
+}
+
+.nav_menu li a {
+    text-decoration: none;
+    color: black
+}
+
+.nav_toggle {
+    padding: 25px 25px 0px 0px;
+
+}
+
+.nav a {
+    padding: 25px 0px 0px 25px;
+
+}
+
+.close {
+    display: none;
+}
+
+#nav_checkbox:checked~.nav_menu {
+    display: block;
+}
+
+#nav_checkbox:checked~.nav_toggle .close {
+    display: block;
+}
+
+#nav_checkbox:checked~.nav_toggle .menu {
+    display: none;
+}
+
+.nav_menu li a:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.main {
+    height: auto;
+    padding: 110px 0px 50px 0px;
+}
+
+.image1 {
+    background-image: url(./images/image-web-3-mobile.jpg);
+    height: 40vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main h1 {
+    font-size: 3rem;
+    line-height: 45px;
+    font-weight: 800;
+    padding-top: 20px;
+    font-weight: 800;
+
+}
+
+.main p {
+    color: gray;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 20px 0px;
+    font-weight: 400;
+
+}
+
+.main input {
+    margin: 15px 0px 35px 0px;
+    width: 65%;
+    height: 7vh;
+    background-color: hsl(5, 85%, 63%);
+    font-size: 23px;
+    font-weight: 700;
+    border: none;
+}
+
+.con1 {
+    background-color: #00001A;
+    color: white;
+    height: auto;
+    padding: 20px;
+}
+
+.con1 h1 {
+    font-size: 2rem;
+    padding: 20px 0px;
+    color: hsl(35, 77%, 62%);
+    font-weight: 800;
+}
+
+.con1 h3 {
+    padding: 15px 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.con1 p {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    color: #9fa0b0;
+    font-weight: 400;
+}
+
+.line {
+
+    border-bottom: 1px solid white;
+}
+
+.con2 {
+    height: auto;
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 5rem;
+
+}
+
+.con2 img {
+    height: 23vh;
+    width: 30vw;
+    float: left;
+}
+
+.con2 h1 {
+    color: hsl(5, 85%, 63%);
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 7px;
+}
+
+.con2 h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.con2 p {
+
+    font-size: 1.0rem;
+    color: #908E91;
+    font-weight: 400;
+}
+
+.box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 57vw;
+    height: 23vh;
+}
+
+.sec {
+    position: relative;
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        margin: 70px;
+    }
+
+    .nav_toggle {
+        display: none;
+        
+    }
+    .nav a{
+        padding: 0%;
+    }
+
+    .nav_menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        height: 10vh;
+        align-items: center;
+        width: 70vw;
+        justify-content: end;
+    }
+
+    .nav_menu li {
+        padding: 5px;
+        font-weight: 400;
+        font-size: 20px;
+
+    }
+
+    .nav_menu li:first-child {
+        padding: 0px;
+    }
+
+    .nav {
+        display: flex;
+        position: static;
+        width: auto;
+    }
+
+    .image1 {
+        background-image: url(./images/image-web-3-desktop.jpg);
+        width: 58vw;
+        height: 27vh;
+        background-size: cover;
+    }
+
+    .main h1 {
+        float: left;
+        width: 20vw;
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+
+    .main {
+        position: relative;
+        width: 58vw;
+        height: 52vh;
+        padding: 0;
+    }
+
+    .main p {
+        position: absolute;
+        width: 34vw;
+        right: 0;
+        font-size: 1.17em;
+        padding: 25px 0px 0px 0px;       
+    }
+
+    .main input {
+        width: 25vw;
+        position: absolute;
+        bottom: 0;
+        margin: 0;
+        right: 93px;
+    }
+
+    .con1 {
+        position: absolute;
+        right: 70px;
+        width: 27vw;
+        top: 162px;
+        height: 52vh
+    }
+    .con1 h3{
+        font-size: 1.17em;
+        padding: 0px 0px 20px 0px;
+    }
+    .con1 p {
+        font-size: 1.17em;
+    }
+
+    .con2 {
+        flex-direction: row;
+        margin: 0;
+        height: 22vh;
+        padding-top: 25px
+    }
+
+    .con2 img {
+        width: 12vw;
+        height: 20vh;
+    }
+    .sec{
+        width: 33vw;
+    }
+    .box{
+        position: static;
+        width: auto;
+        height: 20vh;
+        padding-left: 150px;
+    }
+
+}
